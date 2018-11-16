@@ -34,10 +34,35 @@ h1 {
     font-size: 2.4rem;
 }
 
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
 p {
     line-height: 2rem;
     font-size: 1.2rem;
     font-weight: 300;
+}
+
+.boton {
+    background-color: var(--primario);
+    display: block;
+    padding: var(--padding);
+    text-align: center;
+    color: var(--claro);
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--primario);
+    transition: all .5s ease-in-out;
+}
+
+.boton:hover {
+    background-color: var(--claro);
+    color: var(--primario);
 }
 
 .contenedor {
@@ -117,3 +142,114 @@ p {
 
 
 /* /Nosotros */
+
+
+/* Anuncios */
+
+.venta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 1rem;
+}
+
+.venta img {
+    width: 100%;
+}
+
+.destacada {
+    display: grid;
+    grid-column: 1 / 3;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width:768px) {
+    .venta {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+
+.card {
+    background-color: var(--claro);
+    padding: var(--padding);
+    border: 1px solid rgb(199, 199, 199);
+}
+
+.card p {
+    font-size: .9rem;
+    line-height: 1.6rem;
+}
+
+.anuncio {
+    display: grid;
+}
+
+.anuncio .precio {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.precio span {
+    font-weight: 300;
+    color: var(--primario);
+}
+
+
+/* /Anuncios */
+
+
+/* footer */
+
+.footer {
+    background-color: var(--primario);
+    margin-top: var(--padding2);
+    padding-top: var(--padding2);
+    color: var(--claro);
+}
+
+@media (min-width:768px) {
+    .footer .contenedor {
+        display: grid;
+        grid-template-columns: 30% 20% 2fr;
+        grid-column-gap: 2rem;
+    }
+}
+
+.footer .navegacion a {
+    display: block;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.footer .widget h3 {
+    margin-bottom: 2rem;
+}
+
+.footer .contenedor-casas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
+
+.footer .casa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer .casa p {
+    margin: 0;
+}
+
+.copy {
+    background-color: var(--oscuro);
+    margin: 0;
+    text-align: center;
+    padding: var(--padding);
+}
+
+
+/* /footer */
